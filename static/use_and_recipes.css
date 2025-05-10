@@ -1,0 +1,403 @@
+/* Use & Recipes Page Styles */
+.recipes-main {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  color: #F7C94A;
+}
+
+.yellow-brush {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url('../yellow_brush.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.left-brush {
+  top: 10%;
+  left: -100px;
+}
+
+/* Ripeness Guide Styles */
+.ripeness-guide {
+  margin-bottom: 5rem;
+}
+
+.ripeness-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ripeness-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.ripeness-card:hover {
+  transform: translateY(-5px);
+}
+
+.ripeness-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.unripe {
+  background-color: #E5F7DC;
+  color: #4CAF50;
+}
+
+.ripe {
+  background-color: #FFF8E1;
+  color: #FFC107;
+}
+
+.overripe {
+  background-color: #FFEBEE;
+  color: #F44336;
+}
+
+.ripeness-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ripeness-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.ripeness-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ripeness-card li::before {
+  content: "•";
+  color: #F7C94A;
+  margin-right: 0.5rem;
+}
+
+.ripeness-tip {
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Recipes Grid Styles */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .recipe-image img {
+  transform: scale(1.05);
+}
+
+.recipe-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+/* Recipe Modal Styles */
+.recipe-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+}
+
+.recipe-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.recipe-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.close-modal:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.recipe-image-large {
+  width: 100%;
+  height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.recipe-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.recipe-ingredients, 
+.recipe-instructions, 
+.recipe-tips {
+  margin-bottom: 2rem;
+}
+
+.recipe-ingredients h3, 
+.recipe-instructions h3, 
+.recipe-tips h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recipe-ingredients ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe-ingredients li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.recipe-ingredients li::before {
+  content: "•";
+  color: #F7C94A;
+  margin-right: 0.5rem;
+}
+
+.recipe-instructions ol {
+  padding-left: 1.5rem;
+}
+
+.recipe-instructions li {
+  padding: 0.5rem 0;
+}
+
+.recipe-tips p {
+  background-color: #FFF8E1;
+  border-left: 4px solid #F7C94A;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+}
+
+/* Custom scrollbar for modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ripeness-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .recipe-info {
+      flex-direction: column;
+  }
+  
+  .modal-content {
+      width: 95%;
+      max-height: 85vh;
+  }
+  
+  .modal-header h2 {
+      font-size: 1.5rem;
+  }
+  
+  .recipe-image-large {
+      height: 200px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pop-in.active {
+  opacity: 1;
+  transform: scale(1);
+}
