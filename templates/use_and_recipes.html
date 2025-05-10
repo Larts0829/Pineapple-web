@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use & Recipes - RipenScan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='use_and_recipes.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navigation -->
+        <header>
+            <a href="/" class="logo">RipenScan</a>
+            <nav class="desktop-nav">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/health-benefits">Health Benefits</a>
+                <a href="/contacts">Contacts</a>
+                <a href="/use-and-recipes" class="active">Use & Recipes</a>
+            </nav>
+            <button class="mobile-menu-button" id="menuButton" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/health-benefits">Health Benefits</a>
+                <a href="/contacts">Contacts</a>
+                <a href="/use-and-recipes" class="active">Use & Recipes</a>
+            </nav>
+        </header>
+
+        <!-- Use & Recipes Content -->
+        <main class="recipes-main">
+            <div class="yellow-brush left-brush"></div>
+            
+            <!-- Ripeness Guide Section -->
+            <section class="ripeness-guide">
+                <h1 class="section-title fade-in">Pineapple <span class="highlight">Ripeness</span> Guide</h1>
+                
+                <div class="ripeness-cards">
+                    <div class="ripeness-card fade-in" data-delay="0.2">
+                        <div class="ripeness-icon unripe">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3>Unripe</h3>
+                        <ul>
+                            <li>Green, hard exterior</li>
+                            <li>No sweet aroma</li>
+                            <li>Leaves don't pull out easily</li>
+                            <li>Sour taste</li>
+                        </ul>
+                        <p class="ripeness-tip">Tip: Leave at room temperature for 1-2 days to ripen.</p>
+                    </div>
+                    
+                    <div class="ripeness-card fade-in" data-delay="0.4">
+                        <div class="ripeness-icon ripe">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Perfectly Ripe</h3>
+                        <ul>
+                            <li>Golden-yellow exterior</li>
+                            <li>Sweet, fragrant aroma</li>
+                            <li>Slightly soft when pressed</li>
+                            <li>Center leaf pulls out easily</li>
+                        </ul>
+                        <p class="ripeness-tip">Tip: Enjoy immediately or refrigerate for up to 3 days.</p>
+                    </div>
+                    
+                    <div class="ripeness-card fade-in" data-delay="0.6">
+                        <div class="ripeness-icon overripe">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Overripe</h3>
+                        <ul>
+                            <li>Dark orange-yellow color</li>
+                            <li>Very soft to touch</li>
+                            <li>Fermented smell</li>
+                            <li>Bruised appearance</li>
+                        </ul>
+                        <p class="ripeness-tip">Tip: Best used in smoothies, baking, or frozen desserts.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Unusual Recipes Section -->
+            <section class="unusual-recipes">
+                <h1 class="section-title fade-in">Unusual <span class="highlight">recipes</span></h1>
+                
+                <div class="recipes-grid">
+                    <!-- Recipe 1 -->
+                    <div class="recipe-card fade-in" data-delay="0.2" data-recipe="pineapple-fruit-salad">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/pineapple_fruit_salad.jpg') }}" alt="Pineapple fruit salad">
+                        </div>
+                        <h3>Pineapple fruit salad</h3>
+                    </div>
+                    
+                    <!-- Recipe 2 -->
+                    <div class="recipe-card fade-in" data-delay="0.3" data-recipe="coconut-delight">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/coconut_delight.jpg') }}" alt="Coconut delight with pineapples">
+                        </div>
+                        <h3>Coconut delight with pineapples</h3>
+                    </div>
+                    
+                    <!-- Recipe 3 -->
+                    <div class="recipe-card fade-in" data-delay="0.4" data-recipe="pineapple-ice-cream">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/pineapple_ice_cream.jpg') }}" alt="Homemade pineapple ice cream">
+                        </div>
+                        <h3>Homemade pineapple ice cream</h3>
+                    </div>
+                    
+                    <!-- Recipe 4 -->
+                    <div class="recipe-card fade-in" data-delay="0.5" data-recipe="pineapple-pie">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/pineapple_pie.jpg') }}" alt="Pineapple pie">
+                        </div>
+                        <h3>Pineapple pie</h3>
+                    </div>
+                    
+                    <!-- Recipe 5 -->
+                    <div class="recipe-card fade-in" data-delay="0.6" data-recipe="pineapple-smoothie">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/pineapple_smoothie.jpg') }}" alt="Smoothie with pineapples & ginger">
+                        </div>
+                        <h3>Smoothie with pineapples & ginger</h3>
+                    </div>
+                    
+                    <!-- Recipe 6 -->
+                    <div class="recipe-card fade-in" data-delay="0.7" data-recipe="pineapple-cocktail">
+                        <div class="recipe-image">
+                            <img src="{{ url_for('static', filename='recipes/pineapple_cocktail.jpg') }}" alt="Fresh pineapple cocktail with lime">
+                        </div>
+                        <h3>Fresh pineapple cocktail with lime</h3>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Recipe Modal -->
+            <div class="recipe-modal" id="recipeModal">
+                <div class="modal-content">
+                    <button class="close-modal" id="closeModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    
+                    <div class="modal-header">
+                        <h2 id="recipeTitle">Recipe Title</h2>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="recipe-image-large">
+                            <img id="recipeImage" src="/placeholder.svg" alt="Recipe">
+                        </div>
+                        
+                        <div class="recipe-details">
+                            <div class="recipe-info">
+                                <div class="info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span id="prepTime">Prep: 15 mins</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                                    </svg>
+                                    <span id="cookTime">Cook: 0 mins</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span id="servings">Serves: 4</span>
+                                </div>
+                            </div>
+                            
+                            <div class="recipe-ingredients">
+                                <h3>Ingredients</h3>
+                                <ul id="ingredientsList">
+                                    <!-- Ingredients will be populated by JavaScript -->
+                                </ul>
+                            </div>
+                            
+                            <div class="recipe-instructions">
+                                <h3>Instructions</h3>
+                                <ol id="instructionsList">
+                                    <!-- Instructions will be populated by JavaScript -->
+                                </ol>
+                            </div>
+                            
+                            <div class="recipe-tips">
+                                <h3>Tips</h3>
+                                <p id="recipeTips">Recipe tips will be displayed here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='use_and_recipes.js') }}"></script>
+</body>
+</html>

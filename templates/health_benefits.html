@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Benefits - RipenScan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='health_benefits.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navigation -->
+        <header>
+            <a href="/" class="logo">RipenScan</a>
+            <nav class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about">About</a>
+                <a href="/health-benefits" class="active">Health Benefits</a>
+                <a href="/contacts">Contacts</a>
+                <a href="/use-and-recipes">Use & Recipes</a>
+            </nav>
+            <button class="mobile-menu-button" id="menuButton" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about">About</a>
+                <a href="/health-benefits" class="active">Health Benefits</a>
+                <a href="/contacts">Contacts</a>
+                <a href="/use-and-recipes">Use & Recipes</a>
+            </nav>
+        </header>
+
+        <!-- Health Benefits Content -->
+        <main class="health-benefits-main">
+            <h1 class="health-title"><span class="highlight">Health</span> Benefits</h1>
+            
+            <div class="benefits-container">
+                <!-- Left Side Benefits -->
+                <div class="benefits-column left-benefits">
+                    <div class="benefit-item pop-in" data-delay="0.3">
+                        <div class="benefit-content">
+                            <h3>Loaded with <span class="highlight">nutrients</span></h3>
+                            <p>Pineapples are packed with vitamins, minerals, and enzymes that support overall health and wellbeing.</p>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="benefit-item pop-in" data-delay="0.6">
+                        <div class="benefit-content">
+                            <h3>Disease-fighting <span class="highlight">antioxidants</span></h3>
+                            <p>Rich in antioxidants that help combat oxidative stress and reduce inflammation in the body.</p>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                    
+                    <div class="benefit-item pop-in" data-delay="0.9">
+                        <div class="benefit-content">
+                            <h3>Eases <span class="highlight">digestion</span></h3>
+                            <p>Contains bromelain, an enzyme that aids in breaking down proteins and supports healthy digestion.</p>
+                        </div>
+                        <div class="connector-line"></div>
+                    </div>
+                </div>
+                
+                <!-- Center Pineapple Image -->
+                <div class="pineapple-image-container">
+                    <div class="pineapple-background"></div>
+                    <img src="{{ url_for('static',  filename='pineapple-images/pineapple_health.jpeg') }}" alt="Pineapple" class="pineapple-image fade-in">
+                </div>
+                
+                <!-- Right Side Benefits -->
+                <div class="benefits-column right-benefits">
+                    <div class="benefit-item pop-in" data-delay="0.4">
+                        <div class="connector-line"></div>
+                        <div class="benefit-content">
+                            <h3>Boost <span class="highlight">immunity</span></h3>
+                            <p>High in vitamin C and other immune-boosting compounds that help protect against illness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item pop-in" data-delay="0.7">
+                        <div class="connector-line"></div>
+                        <div class="benefit-content">
+                            <h3>Help reduce the risk of <span class="highlight">cancer</span></h3>
+                            <p>Contains compounds that may help prevent cancer growth and reduce cancer risk factors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item pop-in" data-delay="1.0">
+                        <div class="connector-line"></div>
+                        <div class="benefit-content">
+                            <h3>Soothes <span class="highlight">arthritis</span></h3>
+                            <p>Anti-inflammatory properties may help reduce joint pain and symptoms of arthritis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info fade-in">
+                <h2>Why Include Pineapple in Your Diet?</h2>
+                <p>Pineapples aren't just delicious—they're nutritional powerhouses that can contribute to your overall health in numerous ways. From supporting digestion to boosting immunity, this tropical fruit offers benefits for everyone.</p>
+                <p>For optimal health benefits, consume fresh, ripe pineapple. Our RipenScan app helps you identify the perfect ripeness level to ensure you get maximum nutritional value from your pineapple.</p>
+                <a href="/try-now" class="cta-button">Try RipenScan Now</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='health_benefits.js') }}"></script>
+</body>
+</html>
